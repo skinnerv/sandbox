@@ -13,13 +13,13 @@ if __name__ == '__main__':
 
     while(moveitem):
         moveitem = False
-        for i in range(len(C)-1):
-            o1 = C[i]
-            o2 = C[i+1]
+
+        for i in range(len(C)-1):            
             
-            if o2 < o1:
-                C[i] = o2
-                C[i+1] = o1
+            if C[i+1] < C[i]:
+                
+                C[i], C[i+1]  = C[i+1], C[i]               
+                
                 moveitem = True
     print(C)
             
